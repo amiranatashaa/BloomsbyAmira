@@ -145,7 +145,7 @@
   .price-tag{
     display:inline-flex;
     align-items:baseline;
-    gap:8px;
+    gap:10px;
     font-weight:600;
     font-size:14px;
     color:var(--card);
@@ -158,6 +158,23 @@
     font-family:'Baloo 2', sans-serif;
     font-size:20px;
     color:var(--card);
+  }
+  .price-old{
+    text-decoration:line-through;
+    opacity:0.65;
+    font-size:15px;
+    color:var(--card);
+  }
+  .price-badge{
+    background:var(--logo-pink);
+    color:var(--card);
+    font-family:'Baloo 2', sans-serif;
+    font-size:11px;
+    font-weight:700;
+    letter-spacing:0.04em;
+    text-transform:uppercase;
+    padding:4px 10px;
+    border-radius:999px;
   }
 
   /* ---------- Swatch groups ---------- */
@@ -281,7 +298,11 @@
     <h1>Pick your petals.<br>Fold it flat. Take it anywhere.</h1>
     <p class="sub">Every cup holder is hand-crocheted to order. Choose a petal colour and a center colour from the yarn currently in stock — what you see is what you'll get.</p>
 
-    <div class="price-tag">Handmade to order <strong>RM 25</strong></div>
+    <div class="price-tag">
+      <span class="price-badge">Opening promo</span>
+      <span class="price-old">RM 25</span>
+      <strong>RM 20</strong>
+    </div>
 
     <div class="swatch-card">
       <span class="label">Petals</span>
@@ -335,7 +356,7 @@
       <div class="step">
         <span class="label">Step 3</span>
         <h3>It's crocheted for you</h3>
-        <p>Each one is made after ordering, usually ready within a few days.</p>
+        <p>Each one is made after ordering, usually ready within a weeks.</p>
       </div>
     </div>
   </div>
@@ -374,6 +395,9 @@
 
   const PRODUCT_NAME = "Foldable Flower Cup Holder";
 
+  // EDIT THIS: opening promo price. Update or remove once the promo ends.
+  const PROMO_PRICE = "RM 20";
+
   let selectedPetal = YARN_COLORS.find(c => c.name === "Dusty Pink") || YARN_COLORS[0];
   let selectedCenter = YARN_COLORS.find(c => c.name === "Hot Pink") || YARN_COLORS[1];
 
@@ -405,7 +429,7 @@
 
   function updateOrderLink(){
     const message =
-      `Hi Blooms by Amira! I'd like to order a ${PRODUCT_NAME}.\n` +
+      `Hi Blooms by Amira! I'd like to order a ${PRODUCT_NAME} (${PROMO_PRICE} opening promo).\n` +
       `Petals: ${selectedPetal.name}\n` +
       `Center: ${selectedCenter.name}`;
     const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
