@@ -400,7 +400,7 @@
   const PRODUCT_NAME = "Foldable Flower Cup Holder";
 
   // EDIT THIS: opening promo price. Update or remove once the promo ends.
-  const PROMO_PRICE = "RM 20";
+  //const PROMO_PRICE = "RM 20";
 
   let selectedPetal = YARN_COLORS.find(c => c.name === "Dusty Pink") || YARN_COLORS[0];
   let selectedCenter = YARN_COLORS.find(c => c.name === "Hot Pink") || YARN_COLORS[1];
@@ -433,7 +433,7 @@
 
   function updateOrderLink(){
     const message =
-      `Hi Blooms by Amira! I'd like to order a ${PRODUCT_NAME} (${PROMO_PRICE} opening promo).\n` +
+      `Hi Blooms by Amira! I'd like to order a ${PRODUCT_NAME}\n` +
       `Petals: ${selectedPetal.name}\n` +
       `Center: ${selectedCenter.name}`;
     const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
