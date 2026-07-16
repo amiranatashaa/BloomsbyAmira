@@ -385,17 +385,17 @@
   // message. "hex" is the colour swatch shown to the customer.
   // ---------------------------------------------------------------
   const YARN_COLORS = [
-    { name: "Purple",      hex: "#9b29aa" },
+    { name: "Purple",      hex: "#7b5f91" },
     { name: "Orange",      hex: "#D06A12" },
-    { name: "Baby Blue",   hex: "#A8D8F0" },
+    { name: "Baby Blue",   hex: "#b9d4dc" },
     { name: "Dusty Pink",  hex: "#D9B7C3" },
-    { name: "Hot Pink",    hex: "#D14F92" },
-    { name: "Lavender",    hex: "#B79FD9" },
-    { name: "Yellow",      hex: "#F0D97A" }
+    { name: "Rose Red",    hex: "#be2c67" },
+    { name: "Lavender",    hex: "#beaab8" },
+    { name: "Yellow",      hex: "#F0D97A" },
+    { name: "Mint",      hex: "#b2dcc4" }
   ];
 
   // EDIT THIS: your WhatsApp number, digits only, country code first,
-  // no + or spaces (e.g. Malaysia number 012-345 6789 -> "60123456789")
   const WHATSAPP_NUMBER = "60182250331";
 
   const PRODUCT_NAME = "Foldable Flower Cup Holder";
@@ -404,7 +404,7 @@
   //const PROMO_PRICE = "RM 20";
 
   let selectedPetal = YARN_COLORS.find(c => c.name === "Dusty Pink") || YARN_COLORS[0];
-  let selectedCenter = YARN_COLORS.find(c => c.name === "Hot Pink") || YARN_COLORS[1];
+  let selectedCenter = YARN_COLORS.find(c => c.name === "Rose Red") || YARN_COLORS[1];
 
   function buildSwatches(containerId, onPick, selected){
     const el = document.getElementById(containerId);
